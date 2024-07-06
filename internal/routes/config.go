@@ -21,7 +21,7 @@ func (c *Config)Cors(next http.Handler) http.Handler{
 		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders: []string{"*"},
 		MaxAge: 5,
-		AllowedCredentials: true,
+		AllowCredentials: true,
 		ExposedHeaders: []string{"*"},	
 	}).Handler(next)
 
